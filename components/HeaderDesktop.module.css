@@ -58,3 +58,18 @@
     margin-bottom:-3px;
     
 }
+
+.cartIconWrapper{
+    transition:all .3s ease-in-out;
+    padding:10px;
+    border-radius:15px;
+    cursor: pointer;
+}
+
+.cartIcon { 
+    font-size:20px;
+}
+
+.cartIconWrapper:hover {
+    background:#f0f0f0;
+}

@@ -11,9 +11,9 @@ import { ProductsData }  from '../data/products.json';
 const Products = () => {
     return (
         <Section>
-            <Title>
+            {/* <Title>
                 Conheça nossos <br/> produtos
-            </Title>
+            </Title> */}
             <div className={styles.products}>
                 {
                     ProductsData.map( (product, id) => (

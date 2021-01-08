@@ -1,0 +1,131 @@
+.cart {
+    position:fixed;
+    background:#ffffff;
+    right:0;
+    z-index:35;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+    top:0;
+    width:350px;
+    height:100vh;
+    border-left:1px solid #e6e6e6;
+    border-radius:15px 0 0 15px ;
+}
+
+.cartHeader {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px;
+    border-bottom:1px solid #e6e6e6;
+    height:10%;
+}
+
+
+.cartTitle {
+    font-family:'montserrat';
+    font-weight:500;
+}
+
+.closeIcon {
+    cursor:pointer;
+    font-size:20px;  
+}
+
+.cartItems {
+    margin:0;
+    padding:0;
+    height:80%;
+    overflow-y:scroll;
+    padding:20px;
+}
+
+.cartItems::-webkit-scrollbar {
+    width: 8px;
+}
+
+.cartItems::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #bfbfbf;
+}
+
+.item {
+    display:flex;
+    align-items:center;
+    margin-bottom:20px;
+    padding:10px;
+    border-radius:15px;
+    background:white;
+    box-shadow:0 10px 20px rgba(0,0,0,0.06);
+    animation: showItem .2s  ease-in-out;
+}
+
+@keyframes showItem{
+    0%{
+        opacity:0;
+        transform:scale(0.8);
+    }
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.itemImage{
+    border-radius:15px;
+    height:110px;
+    width:30%;;
+    background-position: center;
+    background-size:cover;
+}
+
+.itemInfo {
+    width:70%;
+    display:flex;
+    align-items:center;
+}
+
+.itemName {
+    font-family:'montserrat';
+    padding-left:20px;
+    margin:0;
+    width:80%;
+}
+
+.removeIcon{
+    cursor: pointer;
+    font-size:20px;
+    width:20%;    
+}
+
+.cartFooter {
+    padding:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.06);
+    border-top:1px solid #e6e6e6;
+    height:10%;
+    display:flex;
+    align-items:center;
+}
+
+.button { 
+    width:100%;
+    background:#43e09f;
+    padding:15px 20px;
+    border-radius:15px;
+    text-align:center;
+    font-family:'montserrat';
+    font-weight:500;
+    cursor:pointer;
+}
+
+.cartMessage {
+    font-family: 'montserrat';
+    color:rgb(175, 175, 175);
+    text-align: center;
+    height:100%;
+    font-size:20px;
+    font-weight: 600;
+    align-items:center;
+    display:flex;
+    margin:0;
+}
+

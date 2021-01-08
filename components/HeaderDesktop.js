@@ -1,9 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 import { FaWhatsapp as WhatsappIcon} from 'react-icons/fa';
+import { FaShoppingBag as CartIcon} from 'react-icons/fa';
+
+import { CartContext } from '../services/CartContext';
+
 import styles from './HeaderDesktop.module.css';
 
 const HeaderDesktop = () => {
+
+    const { setCartVisibility } = useContext(CartContext);
+
     return (
         <header className={styles.header}>
             <div className={styles.column}>
@@ -25,11 +32,21 @@ const HeaderDesktop = () => {
                     Sobre nós
                 </a>
             </div>
+            <div>
+        
+
+            </div>
             <div className={styles.column}>
-                <a href="https://wa.me/5511950465529" className={styles.button}>
+                <div className={styles.cartIconWrapper}>
+                    <CartIcon 
+                        onClick={() => setCartVisibility(true)}
+                        className={styles.cartIcon}
+                    />   
+                </div>
+                {/* <a href="https://wa.me/5511950465529" className={styles.button}>
                     <span className={styles.text}>Entrar em contato</span>
                     <span className={styles.wrapperIcon}><WhatsappIcon className={styles.icon}/></span>
-                </a>
+                </a> */}
             </div>
         </header>
     )

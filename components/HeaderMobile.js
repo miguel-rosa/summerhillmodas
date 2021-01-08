@@ -1,12 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 import { FaWhatsapp as WhatsappIcon} from 'react-icons/fa';
 import { FaPhone as PhoneIcon} from 'react-icons/fa';
 import { FaInstagram as InstagramIcon} from 'react-icons/fa';
+import { FaShoppingBag as CartIcon} from 'react-icons/fa';
+
+import { CartContext } from '../services/CartContext';
 
 import styles from './HeaderMobile.module.css';
 
 const HeaderMobile = () => {
+
+    const { setCartVisibility } = useContext(CartContext);
+
     return (
         <>
             <header mobile="true" className={styles.header}>
@@ -14,6 +20,7 @@ const HeaderMobile = () => {
                     <p mobile="true" className={styles.logo}>
                         Summer Hill Modas
                     </p>
+                    <CartIcon className={styles.cartIcon}onClick={() => setCartVisibility(true)} />
                 </div>
             </header>
             <footer className={styles.headerMobile}>
