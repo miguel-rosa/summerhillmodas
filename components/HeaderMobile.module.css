@@ -7,7 +7,7 @@
     background:white;
     border-bottom:1px solid #e6e6e6;
     width:100%;
-    padding:10px 50px;
+    padding:10px 20px;
     z-index: 30;
     box-shadow:0px 5px 20px rgba(0,0,0,0.04);
 }
@@ -26,7 +26,7 @@
 .logo {
     font-family: 'Permanent Marker', cursive;
     text-transform:uppercase;
-    font-size:21px;
+    font-size:17px;
     margin:0;
     /* font-family: 'Montserrat';
     font-size:18px;
@@ -36,8 +36,12 @@
 .column {
     width: 100%;
     display:flex;
-    justify-content: space-evenly;
-    align-items:flex-end;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.cartIcon{
+    font-size:20px;
 }
 
 .link {
