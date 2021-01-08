@@ -61,7 +61,7 @@ const Cart = () => {
                     }
                 </ul>
                 <footer className={styles.cartFooter}>
-                    <a  href={`https:wa.me/5511950465529/?text=Olá, gostaria de comprar os seguintes itens: ${cartItems.items.map( item => item.name).join(',\r\n ')} `}
+                    <a  href={`https://wa.me/5511950465529/?text=Olá, gostaria de comprar os seguintes itens: ${cartItems.items.map( item => item.name).join(',\r\n ')} `}
                         className={styles.button}>
                         Finalizar compra
                     </a>
