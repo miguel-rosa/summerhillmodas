@@ -3,7 +3,8 @@ import React, {useContext} from 'react';
 import { FaWhatsapp as WhatsappIcon} from 'react-icons/fa';
 import { FaPhone as PhoneIcon} from 'react-icons/fa';
 import { FaInstagram as InstagramIcon} from 'react-icons/fa';
-import { FaShoppingBag as CartIcon} from 'react-icons/fa';
+
+import CartIcon from './CartIcon';
 
 import { CartContext } from '../services/CartContext';
 
@@ -22,7 +23,7 @@ const HeaderMobile = ({data}) => {
                     <p mobile="true" className={styles.logo}>
                         {name}
                     </p>
-                    <CartIcon className={styles.cartIcon}onClick={() => setCartVisibility(true)} />
+                    <CartIcon  />
                 </div>
             </header>
             <footer className={styles.headerMobile}>
