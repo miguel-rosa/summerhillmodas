@@ -24,7 +24,7 @@ export default function Home() {
   },[PAGE_SLUG])
 
   return (
-  data ?
+  data ?(
     <CartStorage data={data}>
       <div className={styles.container}>
         <Head>
@@ -39,6 +39,7 @@ export default function Home() {
           id="#products"/>
       </div>
     </CartStorage>
+    )
     : <>
         <Head>
           <title>Nada encontrado</title> 
