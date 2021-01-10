@@ -11,7 +11,7 @@ const CartIcon = () => {
 
     return (
         <div className={styles.wrapper}>
-            <span className={styles.items}>{cartItems.items.length > 0 && cartItems.items.length}</span>
+            {cartItems.items.length > 0 && <span className={styles.items}>{cartItems.items.length}</span>}
             <Icon 
                 onClick={() => setCartVisibility(true)}
                 className={styles.icon}
