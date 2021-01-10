@@ -13,23 +13,25 @@ import React, {useState, useEffect} from 'react';
 import { CartStorage } from '../services/CartContext'
 import { STORES_DATA } from '../data/store.json';
 
-export default function Home() {
 
-  const [PAGE_SLUG, setPAGE_SLUG] = useState();
+export async function getServerSideProps(context) {
+ const SUBDOMAIN = context.req.headers.host.split('.')[0];
+  return {
+    props: {SUBDOMAIN}, // will be passed to the page component as props
+  }
+}
 
-  useEffect(()=>{
-    setPAGE_SLUG(window.location.hostname.split('.')[0])
-  },[])
-  // const PAGE_SLUG = window.location.hostname.split('.')[0]
-  
+
+export default function Home({SUBDOMAIN}) {
+ 
   // const router = useRouter();
   // const { slug:PAGE_SLUG } = router.query
 
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    setData(STORES_DATA.find( item => item.slug === PAGE_SLUG ))
-  },[PAGE_SLUG])
+    setData(STORES_DATA.find( item => item.slug === SUBDOMAIN ))
+  },[SUBDOMAIN])
 
   return (
   data ? (
