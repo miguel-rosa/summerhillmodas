@@ -1,21 +1,22 @@
 import React, {useContext} from 'react';
 
-import { FaWhatsapp as WhatsappIcon} from 'react-icons/fa';
+// import { FaWhatsapp as WhatsappIcon} from 'react-icons/fa';
 import { FaShoppingBag as CartIcon} from 'react-icons/fa';
 
 import { CartContext } from '../services/CartContext';
 
 import styles from './HeaderDesktop.module.css';
 
-const HeaderDesktop = () => {
+const HeaderDesktop = ({data}) => {
 
     const { setCartVisibility } = useContext(CartContext);
 
+    const {name} = data
     return (
         <header className={styles.header}>
             <div className={styles.column}>
                 <p className={styles.logo}>
-                    Summer Hill Modas
+                    {name}
                 </p>
             </div>
             <div style={{display:'none'}} className={styles.column}>

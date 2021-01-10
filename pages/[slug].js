@@ -1,34 +1,47 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
+import NoPage from './nopage';
+
 import Header from '../components/Header'
 import Products from '../components/Products'
-import Cart from '../components/Cart';
+
+import { useRouter } from 'next/router';
+
+import React, {useState, useEffect} from 'react';
 
 import { CartStorage } from '../services/CartContext'
-import { CartVisibility } from '../services/CartVisibilityContext'
-
-
+import { STORES_DATA } from '../data/store.json';
 
 export default function Home() {
-  return (
 
-    <CartStorage>
-      {/* <CartVisibility> */}
+  const router = useRouter();
+  const { slug:PAGE_SLUG } = router.query
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    setData(STORES_DATA.find( item => item.slug === PAGE_SLUG ))
+  },[PAGE_SLUG])
+
+  return (
+  data ? (
+    <CartStorage data={data}>
       <div className={styles.container}>
         <Head>
-          <title>Summer Hill Modas</title>
-          <meta name="google-site-verification" content="M3dM7HGFRCGYVdDEHKOirldW57YgFi63GJR5hIFBmFo" />
+          <title>{data.name}</title> 
           <link rel="icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet"/>
         </Head>
-        <Header />
-        <Products id="#products"/>
+        <Header data={data}/>
+        <Products data={data}
+          id="#products"/>
       </div>
-      {/* </CartVisibility> */}
     </CartStorage>
+    )
+    : <NoPage />
   )
 }
 

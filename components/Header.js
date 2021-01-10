@@ -5,8 +5,8 @@ import HeaderMobile from './HeaderMobile';
 
 import Cart from './Cart';
 
-const Header = () => {
-
+const Header = ({data}) => {
+    
     const [isMobile, setIsMobile] = useState(false)
     
     useEffect(() => setIsMobile(window.innerWidth < 768), [])
@@ -14,9 +14,9 @@ const Header = () => {
     return (
         <>
            {
-            isMobile ? <HeaderMobile /> : <HeaderDesktop />
+            isMobile ? <HeaderMobile data={data}/> : <HeaderDesktop data={data}/>
            }
-           <Cart/>
+           <Cart whatsapp={data.contacts.whatsapp}/>
         </>
     )
 }
