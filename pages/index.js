@@ -15,8 +15,15 @@ import { STORES_DATA } from '../data/store.json';
 
 export default function Home() {
 
-  const router = useRouter();
-  const { slug:PAGE_SLUG } = router.query
+  const [PAGE_SLUG, setPAGE_SLUG] = useState();
+
+  useEffect(()=>{
+    setPAGE_SLUG(window.location.hostname.split('.')[0])
+  },[])
+  // const PAGE_SLUG = window.location.hostname.split('.')[0]
+  
+  // const router = useRouter();
+  // const { slug:PAGE_SLUG } = router.query
 
   const [data, setData] = useState(null);
 

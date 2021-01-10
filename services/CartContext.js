@@ -14,8 +14,6 @@ export const CartStorage = (props) => {
     }
 
     function addCartItem(data){
-        console.log('data', data)
-        console.log('test', cartItems.items.find( item => item.id === data.id), cartItems.items.find( item => item.id === data.id) === undefined )
         if(cartItems.items.find( item => item.id === data.id) === undefined || !cartItems.items.length){
             const updatedItems = cartItems.items;
             updatedItems.push(data)
