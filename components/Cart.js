@@ -9,14 +9,8 @@ import Icon from './Icon';
 
 const Cart = ({whatsapp}) => {
 
-    const { cartItems, updateCartItems, cartVisibility, setCartVisibility } = useContext(CartContext);
+    const { cartItems, removeCartItem, cartVisibility, setCartVisibility } = useContext(CartContext);
     
-    const handleRemoveItemFromCart = id => {
-        if(cartItems.items.find( item => item.id === id)){
-            const updatedItems = cartItems.items.filter( item => item.id !== id);
-            updateCartItems(updatedItems);
-        }
-    }
     return (
         cartVisibility ? (
             <div className={styles.cart}>
@@ -47,7 +41,7 @@ const Cart = ({whatsapp}) => {
                                                 {item.name}
                                             </p>
                                             <CloseIcon className={styles.removeIcon}
-                                                    onClick={() => handleRemoveItemFromCart(item.id)}
+                                                    onClick={() => removeCartItem(item.id)}
                                                 />
                                         </div>
                                     </li>

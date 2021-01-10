@@ -12,6 +12,23 @@ export const CartStorage = (props) => {
         window.localStorage.setItem(slug, JSON.stringify(dataItems))
         setCartItems({items:dataItems})
     }
+
+    function addCartItem(data){
+        console.log('data', data)
+        console.log('test', cartItems.items.find( item => item.id === data.id), cartItems.items.find( item => item.id === data.id) === undefined )
+        if(cartItems.items.find( item => item.id === data.id) === undefined || !cartItems.items.length){
+            const updatedItems = cartItems.items;
+            updatedItems.push(data)
+            updateCartItems(updatedItems);
+        }
+    }
+
+    function removeCartItem(id) {
+        if(cartItems.items.find( item => item.id === id)){
+            const updatedItems = cartItems.items.filter( item => item.id !== id);
+            updateCartItems(updatedItems);
+        }
+    }   
     
     useEffect(() => {
         const items = JSON.parse(window.localStorage.getItem(slug));
@@ -23,7 +40,7 @@ export const CartStorage = (props) => {
     }, [])
 
     return (
-        <CartContext.Provider value={{ cartItems, updateCartItems, cartVisibility, setCartVisibility }}>
+        <CartContext.Provider value={{ cartItems, cartVisibility, setCartVisibility, addCartItem, removeCartItem}}>
             {props.children}
         </CartContext.Provider>
     )

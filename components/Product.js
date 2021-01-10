@@ -7,29 +7,19 @@ import { FaWhatsapp as WhatsappIcon} from 'react-icons/fa';
 
 const Product = ({ data }, whatsapp) => {
     
-    const {cartItems, updateCartItems, setCartVisibility} = useContext(CartContext);
+    const {cartItems, addCartItem, setCartVisibility} = useContext(CartContext);
     
-    function handleProductBuy(){
-        // console.log('inside handle')
-        // console.log('cartItems', cartItems)
-        // console.log('data', data)
-        // console.log('cartItems.find( item => (item.id !== data.id))', cartItems.find( item => (item.id !== data.id)))
+    function handleProductBuy(data){
         console.log('cartItems', cartItems)
-        const updatedItems = cartItems.items;
-        updatedItems.push(data)
-        // cartItems.push(data)
-        updateCartItems(updatedItems)
-        
-        // setCartItems(updatedItems)
+        addCartItem(data)
+        console.log('cartItems', cartItems)
         setCartVisibility(true);
-        
-        // console.log('test', test)
     }
 
     return (
         <a  
             // href={`${data.url}?text=Olá, me interessei ${data.product ? 'pelo '+ data.product : 'por um produto no site'}, como posso compra-lo?`} 
-            onClick={() => handleProductBuy()}
+            onClick={() => handleProductBuy(data)}
             className={styles.product} 
             style={{backgroundImage:`url(${data.image})`}}
         >
