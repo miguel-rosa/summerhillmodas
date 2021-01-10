@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 
 import { CartContext } from '../services/CartContext';
-// import { CartVisibilityContext } from '../services/CartVisibilityContext';
+
 
 import styles from './Cart.module.css'
 import { FiX as CloseIcon } from 'react-icons/fi';

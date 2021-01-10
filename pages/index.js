@@ -3,12 +3,8 @@ import styles from '../styles/Home.module.css'
 
 import Header from '../components/Header'
 import Products from '../components/Products'
-import Cart from '../components/Cart';
 
 import { CartStorage } from '../services/CartContext'
-import { CartVisibility } from '../services/CartVisibilityContext'
-
-
 
 export default function Home() {
   return (

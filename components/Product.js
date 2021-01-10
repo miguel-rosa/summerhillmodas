@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 
 import { CartContext } from '../services/CartContext';
-// import { CartVisibilityContext } from '../services/CartVisibilityContext';
 
 import styles from './Product.module.css'
 import { FaWhatsapp as WhatsappIcon} from 'react-icons/fa';
@@ -9,8 +8,7 @@ import { FaWhatsapp as WhatsappIcon} from 'react-icons/fa';
 const Product = ({ data }, whatsapp) => {
     
     const {cartItems, updateCartItems, setCartVisibility} = useContext(CartContext);
-    // const { setCartVisibility } = useContext(CartVisibilityContext);
-
+    
     function handleProductBuy(){
         // console.log('inside handle')
         // console.log('cartItems', cartItems)
