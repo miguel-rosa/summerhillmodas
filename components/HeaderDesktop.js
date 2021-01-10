@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 
-import { FaWhatsapp as WhatsappIcon} from 'react-icons/fa';
+// import { FaWhatsapp as WhatsappIcon} from 'react-icons/fa';
 import { FaShoppingBag as CartIcon} from 'react-icons/fa';
 
 import { CartContext } from '../services/CartContext';
