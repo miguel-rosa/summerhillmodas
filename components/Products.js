@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 import styles from './Products.module.css';
@@ -8,7 +8,10 @@ import Section from './Section'
 import Title from './Title'
 import { ProductsData }  from '../data/products.json';
 
-const Products = () => {
+const Products = ({data}) => {
+        
+    const { contacts:{whatsapp}, products } = data
+    
     return (
         <Section>
             {/* <Title>
@@ -16,8 +19,8 @@ const Products = () => {
             </Title> */}
             <div className={styles.products}>
                 {
-                    ProductsData.map( (product, id) => (
-                        <Product data={product} key={id} />
+                    products.map( (product, id) => (
+                        <Product data={product} key={id} whatsapp={whatsapp}/>
                     ))
                 }
             </div>

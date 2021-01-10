@@ -6,7 +6,7 @@ import { CartContext } from '../services/CartContext';
 import styles from './Product.module.css'
 import { FaWhatsapp as WhatsappIcon} from 'react-icons/fa';
 
-const Product = ({ data }) => {
+const Product = ({ data }, whatsapp) => {
     
     const {cartItems, updateCartItems, setCartVisibility} = useContext(CartContext);
     // const { setCartVisibility } = useContext(CartVisibilityContext);

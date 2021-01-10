@@ -3,7 +3,7 @@
     [
         {
             "id":1,
-            "name": "Biquíni",
+            "name": "Biquíniz",
             "image":"http://www.maniadpraia.com.br/images/colecao_2020/5.jpg"
         },
         {   
@@ -65,21 +65,6 @@
             "id":13,
             "name": "Biquíni",
             "image":"http://www.maniadpraia.com.br/images/colecao_2020/48.jpg"
-        },
-        {
-            "id":14,
-            "name": "Biquíni",
-            "image":"http://www.maniadpraia.com.br/images/colecao_2020/49.jpg"
-        },
-        {
-            "id":15,
-            "name": "Biquíni",
-            "image":"http://www.maniadpraia.com.br/images/colecao_2020/50.jpg"
-        },
-        {
-            "id":16,
-            "name": "Biquíni",
-            "image":"http://www.maniadpraia.com.br/images/colecao_2020/51.jpg"
         }
     ]
     
