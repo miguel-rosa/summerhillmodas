@@ -6,7 +6,7 @@ export const CartStorage = (props) => {
 
     const [cartItems, setCartItems] = useState({items:[]});
     const [cartVisibility, setCartVisibility] = useState(false);
-    const {slug} = props.data
+    const {slug} = props.data ? props.data : 'items'
 
     function updateCartItems(dataItems) {
         window.localStorage.setItem(slug, JSON.stringify(dataItems))
