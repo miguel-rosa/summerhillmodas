@@ -1,16 +1,16 @@
 import React from 'react';
 import Head from 'next/head'
 
-const NoPage = () => {
+const Home = () => {
     return (
         <>
         <Head>
-          <title>Nada encontrado</title> 
+          <title>Venda pelo whatsapp</title> 
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div>Ops, não encontramos nada</div>
+        Nenhuma loja encontrada!
         </>
     )
 }
 
-export default NoPage;
+export default Home;

@@ -16,7 +16,7 @@ const Header = ({data}) => {
            {
             isMobile ? <HeaderMobile data={data}/> : <HeaderDesktop data={data}/>
            }
-           <Cart whatsapp={data.contacts.whatsapp}/>
+           <Cart whatsapp={data.whatsapp}/>
         </>
     )
 }

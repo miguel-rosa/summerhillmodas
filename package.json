@@ -8,9 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@apollo/client": "^3.3.6",
+    "axios": "^0.21.1",
     "next": "10.0.4",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-icons": "^4.1.0"
+    "react-icons": "^4.1.0",
+    "sqlite3": "^5.0.1"
   }
 }

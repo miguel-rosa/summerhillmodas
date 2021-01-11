@@ -10,7 +10,7 @@ import { ProductsData }  from '../data/products.json';
 
 const Products = ({data}) => {
         
-    const { contacts:{whatsapp}, products } = data
+    const { whatsapp, products } = data
     
     return (
         <Section>
