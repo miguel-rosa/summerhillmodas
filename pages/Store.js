@@ -12,6 +12,7 @@ const Store = ({data}) => {
 
     console.log('data', data)
     return (
+        data ?
         <CartStorage data={data}>
             <div className={styles.container}>
                 <Head>
@@ -26,6 +27,7 @@ const Store = ({data}) => {
                 id="#products"/>
             </div>
         </CartStorage>
+        : null
     )
 }
 
