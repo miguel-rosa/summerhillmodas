@@ -14,7 +14,7 @@ const HeaderMobile = ({data}) => {
 
     const { setCartVisibility } = useContext(CartContext);
 
-    const {name, contacts:{whatsapp,instagram, phone} } = data;
+    const {name, whatsapp,instagram, phone } = data;
 
     return (
         <>
@@ -23,7 +23,7 @@ const HeaderMobile = ({data}) => {
                     <p mobile="true" className={styles.logo}>
                         {name}
                     </p>
-                    <CartIcon  />
+                    <CartIcon onClick={() => setCartVisibility(true)} />
                 </div>
             </header>
             <footer className={styles.headerMobile}>
