@@ -22,7 +22,7 @@ const HeaderMobile = () => {
                         <PhoneIcon className={styles.phoneIcon} />
                         <span className={styles.text}>fone</span>
                     </a>
-                    <a href="https://wa.me/5511950465529" className={styles.button}>
+                    <a href="https://wa.me/5511960667229" className={styles.button}>
                         <span className={styles.wrapperIcon}><WhatsappIcon className={styles.whatsappIcon}/></span>
                         <span className={styles.text}>whatsapp</span>
                     </a>
