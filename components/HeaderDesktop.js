@@ -26,7 +26,7 @@ const HeaderDesktop = () => {
                 </a>
             </div>
             <div className={styles.column}>
-                <a href="https://wa.me/5511950465529" className={styles.button}>
+                <a href="https://wa.me/5511960667229" className={styles.button}>
                     <span className={styles.text}>Entrar em contato</span>
                     <span className={styles.wrapperIcon}><WhatsappIcon className={styles.icon}/></span>
                 </a>
